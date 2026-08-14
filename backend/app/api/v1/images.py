@@ -31,7 +31,7 @@ async def upload_image(
     try:
         image = await save_upload(db, file)
         await db.commit()
-        process_image_task.delay(image.id)
+        process_image_task.apply(args=[image.id])
         return UploadResponse(
             processing_id=image.processing_id,
             status=image.status.value,
