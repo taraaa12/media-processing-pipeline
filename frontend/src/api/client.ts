@@ -5,7 +5,7 @@ import axios from 'axios'
  * - Empty/unset (default): same-origin requests via nginx /api proxy (Docker) or Vite dev proxy.
  * - http://localhost:8000: direct backend access for local dev without proxy.
  */
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '')
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? 'https://media-processing-backend-nzhr.onrender.com').replace(/\/$/, '')
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

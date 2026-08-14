@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     upload_dir: str = "./uploads"
     max_upload_size_mb: int = 10
     allowed_extensions: str = "jpg,jpeg,png,webp"
-    cors_origins: str = "http://localhost:5173,http://localhost:3000"
+    cors_origins: str = "http://localhost:5173,http://localhost:3000,https://media-processing-frontend-9zoc.onrender.com"
     log_level: str = "INFO"
     secret_key: str = "dev-secret-key"
 
